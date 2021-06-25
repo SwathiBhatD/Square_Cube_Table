@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQUARE_CUBE</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form action=""name="form">
+        <table align="center">
+            <tr >
+                <td>Enter total number of values :</td>
+                <td><input type="text"name="textDisplay"value="" placeholder='0'autocomplete="off"/></td>
+                <td><input type="button" value="SUBMIT" onclick="square_cube();"/></td>
+            </tr>
+        </table>
+    </form><br><br>
+    <table align=center id="table"></table>
+    <script>
+        function square_cube(){
+        var n=form.textDisplay.value;
+        var newRow ; 
+        var tab=document.getElementById('table');
+        
+        if(n!='' && n!=0){
+            tab.style.display="table";
+        document.getElementById('table').innerHTML="<tr ><th colspan='3'>SQUARE-CUBE TABLE</th></tr><tr><th>NUMBER<br/>(n)</th><th>SQUARE<br/>(n<sup>2</sup>)</th><th>CUBE<br/>(n<sup>3</sup>)</th></tr>";
+      
+        for(var i=0;i<n;i++)
+        {
+            newRow = table.insertRow(table.rows.length); 
+            newRow.insertCell(0).innerHTML=i;
+			newRow.insertCell(1).innerHTML=i*i;
+			newRow.insertCell(2).innerHTML=i*i*i;
+            
+        }
+    }
+    else{
+        tab.style.display="none";
+    }
+    
+}
+    </script>
+</body>
+</html>
